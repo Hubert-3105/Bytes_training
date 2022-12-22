@@ -1,0 +1,12 @@
+class Solution(object):
+    def majorityElement(self, nums):
+
+        ans = []
+        l = len(nums)
+        nums_set = set(nums)
+        
+        for n in nums_set:
+            if nums.count(n) > l / 3:
+                ans.append(n)
+                
+        return ans
